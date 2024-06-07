@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heaven - Booking Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .head {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin: 0;
+        }
+
+        .wrapper {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+
+        p {
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .copyright {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            font-size: 0.8em;
+            padding: 10px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .head {
+                padding: 10px;
+            }
+            h1 {
+                font-size: 1.5em;
+            }
+            .wrapper {
+                padding: 10px;
+            }
+            p {
+                font-size: 0.8em;
+            }
+            img {
+                margin: 10px auto;
+            }
+            .copyright {
+                font-size: 0.7em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="head">
+        <h1>Heaven Booking Details</h1>
+    </div>
+    <div class="wrapper">
+        <p>Booking ID: <b>{{ booking_data.booking_id }}</b></p>
+        <p>Tour Package: {{ booking_data.tour_package.title }}</p>
+        <p>Start Date: {{ booking_data.tour_start_date }}</p>
+        <p>End Date: {{ booking_data.tour_end_date }}</p>
+        <p>Booking Time: {{ booking_data.booking_time }}</p>
+        <p>Participants: {{ booking_data.participants }}</p>
+        <p>Total Price: {{ booking_data.total_price }}</p>
+        <!-- Display the QR code using the provided URL -->
+        <img src="media/{{ booking_data.booking_qr }}" alt="Booking QR Code" width="250" height="250">
+    </div>
+    <!-- Copyright notice as footer -->
+    <div class="copyright">© HEAVEN. All rights reserved.</div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+.fullbody {
+    padding: 20px;
+  }
+  
+  .card-header {
+    background-color: #17a2b8;
+    color: white;
+  }
+  
+  .card-footer {
+    background-color: #f8f9fa;
+  }
+  
+  .card-footer button {
+    margin-top: 10px;
+  }
+  
+  .movie img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .static {
+    margin-top: 20px;
+  }
+  
+  .logic {
+    margin-top: 20px;
+  }
+  
+  .counter {
+    margin-right: 10px;
+  }
+  
+  .show-time-container {
+    margin-top: 20px;
+  }
+  
+  .invalid-feedback {
+    color: #dc3545;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .card-header h3 {
+      font-size: 1.5rem;
+    }
+  
+    .static p {
+      font-size: 0.9rem;
+    }
+  
+    .logic p {
+      font-size: 0.9rem;
+    }
+  }
+  
